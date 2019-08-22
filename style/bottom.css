@@ -1,11 +1,11 @@
 #bottom-container{
-  /*border:2px solid red;*/
+  border:2px solid red;
   width:95vw;
   height: 11vw;
 }
 
 .controles{
-  /*border: 2px solid blue;*/
+  border: 2px solid blue;
   background-color: lightcoral;
   border-radius: 8px;
   width: 50%;
@@ -20,9 +20,6 @@
 }
 
 .radio {
-  width: 1px;
-  height: 1px;
-  content: '';
   border: 2px solid green;
   margin:0;
   padding:0;
@@ -31,8 +28,6 @@
 }
 
 .radio:checked {
-  width:1px;
-  height: 1px;
   border-radius: 100px;
   margin:0;
   box-shadow: 0px 0px 10px 10px black;
