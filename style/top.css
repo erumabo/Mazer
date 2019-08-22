@@ -1,0 +1,36 @@
+body{
+  padding:0;
+}
+div{
+  box-sizing:border-box;
+}
+
+#top-container{
+  border:1px solid red;
+  width:95vw;
+  height:95vw;
+  position:relative;
+}
+
+.filler {
+  border: 2px solid blue;
+  position: relative;
+  top:0;bottom:0;
+  left:0;right:0;
+  width:100%;
+  height:100%;
+}
+
+.flotador {
+  border:2px solid green;
+  width:90%;
+  height:90%;
+  margin:5%;
+}
+
+#matriz {
+  box-sizing: border-box;
+  border:2px solid cyan;
+  width:100%;
+  height:100%;
+}
