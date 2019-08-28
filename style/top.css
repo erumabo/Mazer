@@ -1,22 +1,24 @@
 body{
   border: 2px solid yellow;
   padding:0;
-  background-color: lightcyan;
+  background-color: cyan;
   box-sizing: border-box;
 }
 div{
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 #top-container{
   border:1px solid red;
-  width:95vw;
-  height:95vw;
+  background-color: red;
+  width:100vw;
+  height:100vw;
   position:relative;
 }
 
 .filler {
   border: 2px solid blue;
+  background-color: blue;
   position: relative;
   top:0;bottom:0;
   left:0;right:0;
@@ -26,6 +28,7 @@ div{
 
 .flotador {
   border:2px solid green;
+  background-color: green;
   width:90%;
   height:90%;
   margin:5%;
@@ -34,6 +37,18 @@ div{
 #matriz {
   box-sizing: border-box;
   border:2px solid cyan;
+  background-color: cyan;
+  width:100%;
+  height:100%;
+}
+
+td{
+  border: 0px solid black;
+  width:5%;
+  height:5%;
+}
+
+.cell {
   width:100%;
   height:100%;
 }

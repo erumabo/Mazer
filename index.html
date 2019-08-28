@@ -9,7 +9,7 @@
   <script type="text/javascript" src="script/index.js"></script>
   <title></title>
 </head>
-<body>
+<body onload="tableSet()">
   <div id="top-container">
     <div class="filler">
       <div class="flotador">
@@ -20,11 +20,28 @@
     </div>
   </div>
   <div id="bottom-container">
-    <div class="controles">
-      <input type="radio" name="dim" id="xy" class="radio">
-      <input type="radio" name="dim" id="yz" class="radio">
-      <input type="radio" name="dim" id="xz" class="radio">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-primary" >
+        <input type="radio" name="dim" id="xy" class="radio">
+        XY
+      </label>
+      <label class="btn btn-primary" >
+        <input type="radio" name="dim" id="yz" class="radio">
+        YZ
+      </label>
+      <label class="btn btn-primary" >
+        <input type="radio" name="dim" id="xz" class="radio">
+        XZ
+      </label>
     </div>
   </div>
+  <button onclick="tableFill()">clocl</button>
+  
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
 </body>
 </html>

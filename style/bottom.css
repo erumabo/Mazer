@@ -1,33 +1,9 @@
 #bottom-container{
   border:2px solid red;
+  background-color: red;
   width:95vw;
   height: 11vw;
+  position:fixed;
+  bottom:0;
+  text-align: center;
 }
-
-.controles{
-  border: 2px solid blue;
-  background-color: lightcoral;
-  border-radius: 8px;
-  width: 50%;
-  height:100%;
-  margin-left:auto;
-  margin-right:auto;
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  justify-items:center;
-  align-items:center;
-  padding: 0;
-}
-
-.radio {
-  border: 2px solid green;
-  margin:0;
-  padding:0;
-  background-color: lightcyan;
-}
-
-.radio:checked {
-  border-radius: 100px;
-  margin:0;
-}
-
