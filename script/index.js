@@ -1,13 +1,15 @@
 var mymaze;
 
 var Cf = {
-  S:0,
-  H:30,
-  W:30,
+  S:30,
+  H:15,
+  W:15,
 }
 
 function setup(){
-  Cf.S = (windowWidth-20)/Cf.W;
+  if(windowWidth<=600){
+    Cf.S = (windowWidth-20)/Cf.W;
+  }
   mymaze = new Maze(Cf.W,Cf.H);
   createCanvas(Cf.W*Cf.S+10,Cf.H*Cf.S+10).parent("mzdisp");
 }
