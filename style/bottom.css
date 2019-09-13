@@ -1,8 +1,7 @@
 #bottom-container{
   border:2px solid red;
   background-color: red;
-  width:95vw;
-  height: 11vw;
+  width:100vw;
   position:fixed;
   bottom:0;
   text-align: center;

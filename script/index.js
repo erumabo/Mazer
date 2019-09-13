@@ -1,39 +1,26 @@
-var mmaze = new Maze(20,20);
-console.log(mmaze.height);
-mmaze.print();
+var mymaze;
 
-function tableSet(){
-  var tabla=document.getElementById("matriz");
-  var tr,td;
-  if(tabla){
-    for(i=0;i<mmaze.height;++i){
-      tr=tabla.insertRow();
-      for(j=0;j<mmaze.width;++j){
-        td=tr.insertCell();
-        console.log(mmaze.cellAt(i,j))
-        td.innerHTML=
-        '<div class="cell" style="background-color:'
-        +(mmaze.cellAt(i,j)===0?"black":"white")
-        +'"></div>';
-      }
-    }
-  }
+var Cf = {
+  S:20,
+  H:30,
+  W:30,
 }
 
-function tableFill(){
-  mmaze.clear(0);
-  mmaze.genMaze(0,0);
-  var tabla=document.getElementById("matriz");
-  var tr,td;
-  if(tabla){
-    for(i=0;i<mmaze.height;++i){
-      for(j=0;j<mmaze.width;++j){
-        td=tabla.rows[i].cells[j];
-        td.innerHTML=
-          '<div class="cell" style="background-color:'
-         +(mmaze.cellAt(i,j)===0?"black":"white")
-         +'"></div>';
+function setup(){
+  mymaze = new Maze(Cf.W,Cf.H);
+  createCanvas(Cf.W*Cf.S+10,Cf.H*Cf.S+10).parent("mzdisp");
+}
+
+function draw(){
+  background(0);
+  for(var i=0;i<Cf.W;++i){
+    for(var j=0;j<Cf.H;++j){
+      if(mymaze.cellAt(i,j)>0){
+        fill(255);
+      } else {
+        fill(0);
       }
+      rect(i*Cf.S+5,j*Cf.S+5,Cf.S,Cf.S);
     }
   }
 }
