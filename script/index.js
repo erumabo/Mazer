@@ -1,8 +1,8 @@
 var mymaze;
+var change=true;
 
 var Cf = {
   S:30,
-  H:15,
   W:15,
 }
 
@@ -10,15 +10,16 @@ function setup(){
   if(windowWidth<=600){
     Cf.S = (windowWidth-20)/Cf.W;
   }
-  mymaze = new Maze(Cf.W,Cf.H);
-  createCanvas(Cf.W*Cf.S+10,Cf.H*Cf.S+10).parent("mzdisp");
+  mymaze = new Maze(Cf.W);
+  createCanvas(Cf.W*Cf.S+10,Cf.W*Cf.S+10).parent("mzdisp");
 }
 
 function draw(){
+  if(!change) return;
   background(0);
   for(var i=0;i<Cf.W;++i){
-    for(var j=0;j<Cf.H;++j){
-      if(mymaze.cellAt(i,j)>0){
+    for(var j=0;j<Cf.W;++j){
+      if(mymaze.cellAt(i,j,0)>0){
         fill(255);
       } else {
         fill(0);
@@ -26,4 +27,5 @@ function draw(){
       rect(i*Cf.S+5,j*Cf.S+5,Cf.S,Cf.S);
     }
   }
+  change=false;
 }
