@@ -29,3 +29,7 @@ function draw(){
   }
   change=false;
 }
+
+function mousePressed(){
+  $.when(mymaze.clear(0),mymaze.genMaze(0,0,0)).then(()=>{change=true;});
+}

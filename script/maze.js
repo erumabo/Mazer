@@ -9,16 +9,15 @@ class Maze{
 
 
   cellAt(x,y,z){
-    if(this.maze[x])
-      if(this.maze[x][y])
-        if(this.maze[x][y][z])
+    if(this.maze[x] && this.maze[x][y] && this.maze[x][y][z])
           return this.maze[x][y][z]
     return 0;
   }
   
   print(z=0){
-    for(var i=0;i<this.side;++i){
-      for(var j=0,s="";j<this.side;++j)
+    var i,j,s;
+    for(i=0;i<this.side;++i){
+      for(j=0,s="";j<this.side;++j)
         s=s+(this.maze[i][j][z]>0?'1':'0')
       console.log(s);
     }
@@ -57,7 +56,7 @@ class Maze{
 }
 
 function randomDir(){
-  l=[1,2,3,0,4,5];
+  l=[1,4,3,5,0,2];
   var t=0,i=0;
   for(var j=5;j>0;--j){
     i=Math.floor(Math.random()*(j+1));
